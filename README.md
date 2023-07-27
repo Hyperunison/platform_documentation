@@ -201,6 +201,9 @@ To do so, select in the Data Analysis Options section the "Unison Cluster (login
 It is important to specify the correct reference transcriptome and genome. In our example, we are dealing with a human dataset. The simplest way to get the analysis started is to set the
 `--genome` option to "GRCh38". 
 
+!!! Note to us: Add section on how to use the `--fasta` and `--gtf` flags to specify reference transcriptome / genomes. In this case we need to explain in more detail (a) how the user finds and selects those references and (b) how the downstream analyses need to be adapted as the output matrix of the nf-core pipeline will contain gene identifiers, rather than gene names. This will then have to be matched to the same version of reference transcriptome in order to convert them into gene names. !!!
+!!! More documentation needed on how to deal with other species than human !!!
+
 
 !!! Note: At present users should not select the salmon_rsem aligner option, as it fails !!!
 
