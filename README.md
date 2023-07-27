@@ -204,8 +204,38 @@ It is important to specify the correct reference transcriptome and genome. In ou
 !!! Note to us: Add section on how to use the `--fasta` and `--gtf` flags to specify reference transcriptome / genomes. In this case we need to explain in more detail (a) how the user finds and selects those references and (b) how the downstream analyses need to be adapted as the output matrix of the nf-core pipeline will contain gene identifiers, rather than gene names. This will then have to be matched to the same version of reference transcriptome in order to convert them into gene names. !!!
 !!! More documentation needed on how to deal with other species than human !!!
 
+Next, set the ```--aligner``` flag to ```star_rsem``` from the pulldown menu. 
 
-!!! Note: At present users should not select the salmon_rsem aligner option, as it fails !!!
+!!! Note: At present users should not select the salmon_rsem aligner option, as it consistently fails !!!
+
+For a basic analysis, the other parameters can be left in their default state. 
+
+Now press the green Run pipeline button at the bottom of the page. 
+
+The next step is to edit the sample sheet and asign biologically meaningful sample names. This will make it a lot easier to work with the downstream analysis. 
+
+By default the Unison platform provides you with identifiers for all samples. The first thing you need to check is the Unison guess on the strandedness of the experiment is correct. You can best do this by reviewing which sequencing kit has been used in the library preparation for this RNA-Seq dataset. It can be done on the [GEO detail page for this dataset](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE209801). As sequencing platform we find an Illumina machine - so we can guess that sequencing was done in the reverse mode. To definitely confirm this guess we would have to go to the original research article and determine which sequencing kit was used. With that information we can determine if the kit is operating an unstranded, forward or reverse protocol. 
+
+Now we can determine biologically meaningful sample names. To do that, we will have to retrieve the meta-data information for this experiment. We do this by visiting the [GEO detail page for this dataset](), scrolling to the bottom and downloading the "Series Matrix File(s)" from the "Download Family" tab. Once you have downloaded the file, open it in a program like Excel. Scroll down in the first column until you find the entry "!Sample_relation". There are often several rows with this entry. Find the row in which the sample identifiers are matching the ones given in the Unison sample sheet. In this case it will be the row with entries in this format "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN29981293". The column with this sample identifier will contain more information about this sample. For example, we see that for this sample an entry "treatment: DMSO" is present. This means this sample was treated with DMSO. We can do this for each sample and determine the following biological sample names based on the treatment regime:
+
+Original entries:
+UnisonId	sample alias	sampleId	strandedness 
+97851	SAMN29981289	SAMN29981289	reverse
+97852	SAMN29981290	SAMN29981290	reverse
+97850	SAMN29981288	SAMN29981288	reverse
+97853	SAMN29981291	SAMN29981291	reverse
+97854	SAMN29981292	SAMN29981292	reverse
+97855	SAMN29981293	SAMN29981293	reverse
+
+Change to these biologically meaningful sample names based on the series.matrix file entries for this experiment
+Edited entries:
+UnisonId	sample alias	sampleId	strandedness 
+97851	SAMN29981289	NEN_treatment_Rep1	reverse
+97852	SAMN29981290	NEN_treatment_Rep2	reverse
+97850	SAMN29981288	NEN_treatment_Rep3	reverse
+97853	SAMN29981291	DMSO_Rep1	reverse
+97854	SAMN29981292	DMSO_Rep2	reverse
+97855	SAMN29981293	DMSO_Rep3	reverse
 
 ### Perform downstream processing to create the downstream differential gene expression analysis and visualization of results
 
