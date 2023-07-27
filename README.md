@@ -181,7 +181,15 @@ If model is “~condition“ it may be both TRUE and FALSE. And only in this cas
 
 To illustrate the various functionalies of the Unison data analysis platform, we are going to perform a differential gene expression analysis to determine which genes are perturbed by an experimental drug. 
 
+### Find a public dataset of interest
+If you have seen a dataset of interest in a publication, try to find the GEO accession number for that in the article. The GEO accession number is a number in the format GSE123456. If you have such GEO dataset identier, you can proceed the select dataset from the Unison data store point below. 
+
+To find a public dataset of interest, head to the [GEO website](https://www.ncbi.nlm.nih.gov/geo/). In this example, we will be searching for "Transcriptome changes after NEN treament in neuroblastoma cell". If you click on the hit dataset, you can determine the GEO identifier we need [link to resultpage](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE209801): It is GSE209801. 
+
+With this identifier in hand, we head for the Unison data store.
+
 ### Select Dataset from the Unison data store
+Once you are loged onto the Unison platform, the data store can be accessed from the [main page](https://app.hyperunison.com/) by selecting the Data Store option. This will take us to the Unison data store. In the search box we enter the GEO gene set identifier we obtained before: GSE209801. Just one dataset should be diplayed and we click on this tile to lead us to the [Unison dataset detail page for this dataset](https://app.hyperunison.com/datasets/GSE209801). 
 
 ### Submit the RNA-Seq dataset to the alignment pipeline
 
