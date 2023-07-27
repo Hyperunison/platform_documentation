@@ -185,5 +185,7 @@ To illustrate the various functionalies of the Unison data analysis platform, we
 
 ### Submit the RNA-Seq dataset to the alignment pipeline
 
+!!! Note: At present users should not select the salmon_rsem aligner option, as it fails !!!
+
 ### Perform downstream processing to create the downstream differential gene expression analysis and visualization of results
 
