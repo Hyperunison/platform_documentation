@@ -237,5 +237,11 @@ UnisonId	sample alias	sampleId	strandedness
 97854	SAMN29981292	DMSO_Rep2	reverse
 97855	SAMN29981293	DMSO_Rep3	reverse
 
+Once you've made the above edits, you need to either select or create a folder for the outputs of this analysis pipeline. You can do this by selecting an existing folder from the dropdown menu or by creating a new folder. For this demonstration, we select the 'GSE209801_rsem_start_GRCh38_test' option. After that we press the green Start pipelne button. 
+
+Progress of the pipeline run can be monitored on the page that opens. It will take a couple of hours for the RNA-Seq pipeline run to complete. 
+
+!!! Note: Add more information here on trouble shooting and explanations of the various tabs. !!!
+
 ### Perform downstream processing to create the downstream differential gene expression analysis and visualization of results
 
