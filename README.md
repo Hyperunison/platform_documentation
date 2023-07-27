@@ -1,1 +1,189 @@
-# platform_documentation
+# Unison Platform Documentation
+
+## (1) Unison File Space and Workflows
+
+## (2) Data Store
+
+## (3) Data Analysis
+
+## (4) Pipelines and workflows
+
+## (5) Step-by-step-example: Run RNA-Seq analysis and Subsequent Differential Gene Expression Analysis
+
+## (5) Step-by-step-example: Run RNA-Seq analysis and Subsequent Differential Gene Expression Analysis
+
+To illustrate the various functionalies of the Unison data analysis platform, we are going to perform a differential gene expression analysis to determine which genes are perturbed by an experimental drug. 
+
+### Select Dataset from the Unison data store
+
+### Submit the RNA-Seq dataset to the alignment pipeline
+
+### Perform downstream processing to create the downstream differential gene expression analysis and visualization of results
+
+## Unison File Space and Workflows
+Logon to the Unison platform:
+Go to https://app.hyperunison.com/ an select the login option. Log on using
+User: [your username]
+Pass: [your password]
+ 
+How to run a RNA-Seq primarly alignment in the GUI workflow:
+[find old documentation and paste here]
+ 
+Using Unison Jupyter Notebooks
+ 
+Unison jupyter notebooks can be used for all types of data processing. A jupyter notebook can be created for any major programming language. It even is possible to use multiple programming languages within one jupyter notebook.
+ 
+Unison jupyter notebooks are connected to the Unison file space. From the Unison file space, you can read files or save result files. Your code can be saved within the jupyter notebook.
+ 
+Each jupyter notebook has a so-called kernel – a defined software environment. In the case of R-workbooks, we use the renv package manager to maintain required R-packages in a well defined and reproducible fully reproducible setting.
+ 
+Unison projects are organized in a self-contained folder structure. The reason is to maintain each project in an easily transferable state. A defined folder structure makes it easier to draw in sub-workflows from the Unison code store or other sources.  
+ 
+Structure of the Unison file-space
+ 
+Each user has a personal file space. In that personal file-space you have a projects folder. Each project in the projects-folder is a self-contained unit of work. A project is organized around a larger research question and may contain several distinct data analysis projects, for example a genomic and proteomic analysis which then are integrated in a third analysis to create a multi-omics analysis.
+ 
+Within a project folder you find the following folders:
+/code folder: In this folder and it’s sub-folders all code and settings files are kept. This folder should not contain any data or results, so it remains small in file size and can be tracked and managed with a version-control service such as github. In the code folder you may have several subfolders containing the code for each sub-analyses, for example one folder with the code for the RNA-Seq analysis, one folder with the code for the proteomic analysis and one folder with the code for the multiomics integration analysis. Within the folder for an individual analysis, for example the RNA-seq analysis you find a design, documentation and settings folder to keep track of essential small files for this project. In addition you’ll find an analyses folder. The analysis folder contains modular units of work. In the case of the RNAseq analysis one part-analysis folder may constitute the nf_core_rnaseq_alignment (in a distinct folder if you perform this analysis on the command line), a downstreamt_analysis_1_DGE (differential gene expression) folder and additional folders for additional, related sub-analyses such as survival analyses, correlation analyses and so forth. In this sub-analysis folder you would also keep your analyses scripts, for example your jupyter notebooks.
+ 
+/data folder: In the data folder you may keep large data files, particularly input files.
+ 
+/results folder: In the results folder you would deposit result files of your analysis. We would recommend high-level html reports on the top level and create a report_figures and report_tables subfolder.
+ 
+/workdir folder: We would suggest to use the workdir folder to do actual work. Here you can create temporary or intermediate files that don’t need to be tracked via a version control system.
+ 
+ 
+ 
+ 
+ Specific for Alex case
+ 
+·  	The bulk-RNA-seq analysis can be conducted via GUI, as described previously. You can select a relevant RNA-Seq dataset from the datastore, select the bulkRNAseq workflow and run the alignment with the nf-core RNA-seq pipeline. Make sure to specify the correct species for the alignment.
+·  	Once the alignment analysis is complete, you can insert the file paths for the TPM and feature count matrices into the input section of the jupyter notebook for the downstream analysis.
+·  	As examples, we have three jupyter notebooks for you to work with (1) one notebook containing your original analysis code (2) A notebook to perform a very basic differential gene expression analysis on two integrated melanoma RNA-seq datasets and (3) a notebook to access TCGA data for further analysis, for example to integrate it with your own data or to perform downstream analyses on the TCGA data only.
+·  	The jupyter notebook with your (slightly refactored) code can be found at this path: /home/jovyan/projects/project05_Alex_melanoma_sing_scores/code/sing_score_workflow/analyses/sing_score_analysis/ sing_score_analysis_main.ipynb
+·  	The jupyter notebook with an example DGE analysis of the Gide et al and Hugo et al. dataset can be found at this path: home/jovyan/projects/project02_rnaseq_federation/code/bulkRNAseq/analyses/downstream_analysis_1_DGE/Main_Analysis.ipynb
+·  	The jupyter notebook with an example query for some melanoma TCGA RNAseq data can be found at this path: /home/jovyan/projects/project03_TCGA_data_import/code/TCGA_data_access/analyses/TCGA_gene_category_heatmaps/TCGA_heatmaps.ipynb
+·  	A fourth jupyter notebook has been created to develop a distinct analysis workflow for you. It can be reviewed under this path: /home/jovyan/projects/project01_custom_workflow_Alex/code/Alex_custom_analysis/analyses/alex_custom_analysis_no1/alex_custom_analysis_V1.ipynb
+It would be nice if you could add to this workbook ideas on what we can do together. It would be nice to create an end-to-end analysis workflow that’s meaningful to you.
+·  	All of the above three notebooks work with the R422 kernel.
+·  	To start a jupyter notebook, open the jupyter notebook within the Unison jupyter notebook server (to get there, click the data analyses tab within the Unison data analysis platform.
+·  	To navigate to the correct folder, use the folder icon on the left-hand side of the screen.
+·  	Once you have opened a jupyter notebook, the kernel should connect automatically. If it does not, select from the menu bar kernel > change kernel > select R422 from the pulldown menu.
+·  	To run a single cell of code in the jupyter notebook, use the forward arrow in the menu bar. Alternatively, you can select from the menu Run > Run All cells
+·  	If you have done some R-coding, the code should be familiar to you. You may edit any code cell and then re-run just that cell or or cells downstream of th
+
+## (2) Data Store
+
+## (3) Data Analysis
+
+## (4) Pipelines and workflows
+
+### Running the nf-core RNA-Seq pipeline
+
+### RNA-Seq Differential gene expression workflow
+Log on to the Unison platform (https://genobase.pro/) using the following credentials:
+Username:        [your username]
+
+Pass:             [your password]
+
+Paste into the “Search by PRJ/GSE” search box in the top left corner the string “PRJEB23709”
+Press enter and cklick on the dataset “Biomarkers of response and resistance to checkpoint blockade immunotherapy in metastatic melanoma”
+Scroll down to the data processing results section
+Please note: we ran the alignment RNA-seq pipeline on this dataset already. For this reason, you can review the results from this primary alignment run.
+Let’s review the QC results before we move on to the differential gene expression analysis
+Select the main files tab.
+In the “Technical quality of the various sequencing files” section, click on the multiqc_report.html
+This report contains a large number of plots assessing the quality of the RNA-seq samples (to be covered in detail elsewhere).
+Once you’ve convinced yourself that this RNAseq experiment is of sufficient quality, let’s progress to the differential gene expression analysis.
+Use the back button in the brower to get back to the previous menu.
+Again, scroll down to the “Data processing results” section.
+Click on the “Custom Differential Gene Expression” tab
+You will need to specify two files in order to provide crucial details for the differential gene expression analysis: a design table specifying which samples are to be used for your differential gene expression comparisons and a model table that specifies the statistical model for that differential gene expression analysis.
+Download the design.table.tsv file to your computer
+Edit this file to specify the differential gene expression comparisons you need by adding a column named “comp_1”, “comp_2”, …, “comp_N” for each comparison you’d like to specify. In the GSE209801 example we already have a drug vs. ctrl comparison specified as “comp_1”.
+In each column comp_1 to comp_N, indicate two sample groups by entering a group name for this group in this column. For a comparison Group_Perturbation vs. Group_Baseline, enter strings “1_Group_Perturbation” and “2_Group_Baseline” in the rows of the sample.ids you’d like to include in the comparison.
+If you want, you can also delete samples that you deem irrelevant for your study (in this study, that might be the post-treatment samples, for example).
+Save the design table after you have edited it.
+Next, download and open the model.table.csv file. This table will specify the statistical model and the parameters to be used for the differential gene expression comparison.
+Start by entering the comparison ID (“comp_1”, “comp_2”, …,“comp_N”) in the comparison ID column.
+Type a name for each comparison into the comparison column. For example, this could be perturbationGroupName_vs_baselineGroupName. Please avoid empty spaces and use underscores.
+For a differential gene expression comparison the test should be “Wald”. The type column should get the value “DGE”. The model column specifies the statistical model used for the comparison. If you don’t have any covariates or batch effects to consider, just enter “~ condition”. This will produce a differential gene expression comparison just comparing the perturbation and baseline group without considering any other effects.
+For a DGE comparison, leave the reducedModel column empty
+Enter either TRUE or FALSE in the normalizeAllSamplesTogether column. This will determine if only the samples required for the comparison are considered for normalization (=FALSE), or if all samples in the experiment are considered for normalization (=TRUE).
+The betaPrior column determines if a logFC shrinkage algorithm is applied to the DGE results. It is either TRUE or FALSE. It can only be set to TRUE if the statistical model is just “~ condition”. If the model is more complex it has to be set to FALSE.
+Save the model.table
+Return to the custom Differential gene expression tab
+Use the URL to design.table.tsv upload local file option. Specify the path to the design table on your computer that you have just edited. Upload the file.
+Use the URL to model.table.tsv upload local file option. Specify the path to the model table on your computer that you have just edited. Upload the file.
+Press button [RunGenerate report]
+Use the link that appears (Pipeline started, view progress and result) to monitor progress. It should take only a few minutes for the results to appear.
+Once the pipeline is completed, you can review the differential gene expression results in the “Result Files” tab
+Click on the result files tab
+Click on Differential gene expression > html_local
+The main differential gene expression result report can be opened by clicking on “Main_RNAseq_Analysis.html”.
+A differential gene expression spreadsheet can be found and downloaded in the report_tables folder. The file is called “DGEresulttable.txt”
+Explanation Design File:
+The design file defines, among other things, which samples are compared in a differential gene expression comparison.
+
+The design file must have a column called “sample.id”. The strings in the sample.id column must match the column names in the count.tsv and the tpm.tsv files. The design file can contain fewer samples than are present in the count.tsv and tpm.tsv files.
+
+Column name should not contain only letter and underscore [] and shoud not start from number. Regex: [a-zA-Z_]\\w+
+
+The design file must contain a column labelled “sample.group”. In the sample group column replicates of the same type are summarized by the same string. For example, if the sample names are drugTreatment_rep1 and drugTreatment_rep2, the sample.group entry for both would be “drugTreatment”.
+
+The differential gene expression comparisons are specified in additional columns. For each differential gene expression comparison one column must be present in the design file. For example, the first differential gene expression column could be called “comp_1”. In the comp_1 column two types of string should be found (they need to be exactly the same, and there should be no more than two different strings). The first string will specify the first group in the DGE comparison, the second string the second group. For example, the first string could be “1_DrugTreatment” and should be entered in all rows with a sample of the drug treatment group that’s to be used in the DGE comparison. The second string could be “2_Control”. This will define the second group of samples used in the DGE comparison. In the above example a comparison of DrugTreatment vs Control would be generated. It is important that the first group of the comparison is prefixed with “1_” and the second group with “2_”.
+
+Additionally, the design file could contain column names prefixed with “LRT_”. This will specify and trigger an LRT multi group test. In an LRT column, multiple sample groups can be defined with a string. [To keep it simple, let’s forget about this feature for now.].
+
+Explanation Model table:
+The model table specifies the statistical models to be used for differential gene expression and LRT tests. There should be one row in this file for each DGE comparison and for each LRT column.
+
+comparison column
+
+The comparison column entry is constructed for each DGE comparison by concatenating the “1_ABC” and “2_CDE” group string to “ABC_vs_CDE”. It is the name with which the comparison appears in the report.
+
+For LRT in may be any value, but for the same group string must be the same, and for different group it should be different. In the simplest way, it may be the same as group name
+
+comparisonID
+
+The comparisonID column defines the column in the design file from which a DGE comparison is constructed. It needs to be column name that is present in the desing file.
+
+Regex: (comp_\\d+|LRT_\\w+)
+
+test
+
+The test column will contain [for now] only two entries: “Wald” for a DGE comparison and “LRT” for an LRT test.
+
+This field may be hidden now, until we have to other values except “Wald” AND “LRT”
+
+Regex: Wald|LRT
+
+type
+
+The type column will be “DGE” for differential gene expression or “LRT” to specify an LRT test.
+
+Regex: DGE|LRT
+
+model
+
+The model column defines the statistical model used for the DGE or LRT comparison. It is a formula that always starts with “~” followed by factors of the statistical model. Each factor string must be a column name in the design file, with one exception: the condition entry is used to indicate the comparison itself, and is NOT a column in the design file. However, all other strings appearing in the design formula MUST be column names in the design. In the statistical model, those factors/column names can appear in various combinations. For example it could look like this “~ Age + DrugTreatment + Gender + condition” or “~Age + DrugTreatment:Gender” or “~Age + DrugTreatment*Gender”. In the simplest case, the default option “~ condition” should be offered. In this case the simplest possible statistical model will be used.
+
+It may be any mathematical formula, using +, *, brackets and other symbols
+
+reducedModel
+
+The reducedModel column is only relevant for LRT tests. The same rules as for the model column apply.
+
+It may be any mathematical formula, but it may not contain any field not present in model
+
+normalizeAllSamplesTogether
+
+The normalizeAllSamplesTogether column indicates whether all samples in the design file, or just the samples specified for the DGE/LRT comparison are normalized together before the DGE/LRT comparison. This entry is Boolean, TRUE or FALSE
+
+betaPrior
+
+The betaPrior column determines whether log-fold-shrinkage is applied after the DGE comparison. It is only relevant for type = DGE. If the entry in the model column is NOT just ~ condition, this entry must be set to FALSE. However, if the model column contains just “~ condition” or “~ age” or “~ anySingleFactor”, it should be TRUE.
+
+If model is “~condition“ it may be both TRUE and FALSE. And only in this case
+
+
