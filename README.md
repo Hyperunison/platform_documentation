@@ -192,6 +192,15 @@ With this identifier in hand, we head for the Unison data store.
 Once you are loged onto the Unison platform, the data store can be accessed from the [main page](https://app.hyperunison.com/) by selecting the Data Store option. This will take us to the Unison data store. In the search box we enter the GEO gene set identifier we obtained before: GSE209801. Just one dataset should be diplayed and we click on this tile to lead us to the [Unison dataset detail page for this dataset](https://app.hyperunison.com/datasets/GSE209801). 
 
 ### Submit the RNA-Seq dataset to the alignment pipeline
+If you are happy with the dataset selection and have confirmed that the dataset is suitable for being processed by an RNA-Sequencing analysis workflow, you can initate running the RNA-Sequencing analysis workflow. 
+
+!!! Note to us: This section needs tidying up. Many items with unclear functionality !!!
+
+To do so, select in the Data Analysis Options section the "Unison Cluster (login required)" option. Then click on the green button "Run nfcore/rnaseq" on the right hand side. You will be taken to a menu in which the nf-core rnaseq pipeline, which we are going to use for the alignment step, will be configured. 
+
+It is important to specify the correct reference transcriptome and genome. In our example, we are dealing with a human dataset. The simplest way to get the analysis started is to set the
+''' --genome ''' option to "GRCh38". 
+
 
 !!! Note: At present users should not select the salmon_rsem aligner option, as it fails !!!
 
