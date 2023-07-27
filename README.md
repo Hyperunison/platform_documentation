@@ -199,7 +199,7 @@ If you are happy with the dataset selection and have confirmed that the dataset 
 To do so, select in the Data Analysis Options section the "Unison Cluster (login required)" option. Then click on the green button "Run nfcore/rnaseq" on the right hand side. You will be taken to a menu in which the nf-core rnaseq pipeline, which we are going to use for the alignment step, will be configured. 
 
 It is important to specify the correct reference transcriptome and genome. In our example, we are dealing with a human dataset. The simplest way to get the analysis started is to set the
-''' --genome ''' option to "GRCh38". 
+```--genome``` option to "GRCh38". 
 
 
 !!! Note: At present users should not select the salmon_rsem aligner option, as it fails !!!
