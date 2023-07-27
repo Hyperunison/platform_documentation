@@ -10,15 +10,6 @@
 
 ## (5) Step-by-step-example: Run RNA-Seq analysis and Subsequent Differential Gene Expression Analysis
 
-## (5) Step-by-step-example: Run RNA-Seq analysis and Subsequent Differential Gene Expression Analysis
-
-To illustrate the various functionalies of the Unison data analysis platform, we are going to perform a differential gene expression analysis to determine which genes are perturbed by an experimental drug. 
-
-### Select Dataset from the Unison data store
-
-### Submit the RNA-Seq dataset to the alignment pipeline
-
-### Perform downstream processing to create the downstream differential gene expression analysis and visualization of results
 
 ## Unison File Space and Workflows
 Logon to the Unison platform:
@@ -186,4 +177,13 @@ The betaPrior column determines whether log-fold-shrinkage is applied after the 
 
 If model is “~condition“ it may be both TRUE and FALSE. And only in this case
 
+## (5) Step-by-step-example: Run RNA-Seq analysis and Subsequent Differential Gene Expression Analysis
+
+To illustrate the various functionalies of the Unison data analysis platform, we are going to perform a differential gene expression analysis to determine which genes are perturbed by an experimental drug. 
+
+### Select Dataset from the Unison data store
+
+### Submit the RNA-Seq dataset to the alignment pipeline
+
+### Perform downstream processing to create the downstream differential gene expression analysis and visualization of results
 
