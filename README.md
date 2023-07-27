@@ -219,24 +219,28 @@ By default the Unison platform provides you with identifiers for all samples. Th
 Now we can determine biologically meaningful sample names. To do that, we will have to retrieve the meta-data information for this experiment. We do this by visiting the [GEO detail page for this dataset](), scrolling to the bottom and downloading the "Series Matrix File(s)" from the "Download Family" tab. Once you have downloaded the file, open it in a program like Excel. Scroll down in the first column until you find the entry "!Sample_relation". There are often several rows with this entry. Find the row in which the sample identifiers are matching the ones given in the Unison sample sheet. In this case it will be the row with entries in this format "BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN29981293". The column with this sample identifier will contain more information about this sample. For example, we see that for this sample an entry "treatment: DMSO" is present. This means this sample was treated with DMSO. We can do this for each sample and determine the following biological sample names based on the treatment regime:
 
 Original entries:
-UnisonId |sample alias|sampleId|strandedness 
-----------------------------------------
-97851|SAMN29981289|SAMN29981289|reverse
-97852|SAMN29981290|SAMN29981290|reverse
-97850|SAMN29981288|SAMN29981288|reverse
-97853|SAMN29981291|SAMN29981291|reverse
-97854|SAMN29981292|SAMN29981292|reverse
-97855|SAMN29981293|SAMN29981293|reverse
+
+|UnisonId |sample alias|sampleId|strandedness| 
+|-----|------------|------------|-------|
+|97851|SAMN29981289|SAMN29981289|reverse |
+|97852|SAMN29981290|SAMN29981290|reverse |
+|97850|SAMN29981288|SAMN29981288|reverse |
+|97853|SAMN29981291|SAMN29981291|reverse |
+|97854|SAMN29981292|SAMN29981292|reverse |
+|97855|SAMN29981293|SAMN29981293|reverse |
 
 Change to these biologically meaningful sample names based on the series.matrix file entries for this experiment
+
 Edited entries:
-UnisonId	sample alias	sampleId	strandedness 
-97851	SAMN29981289	NEN_treatment_Rep1	reverse
-97852	SAMN29981290	NEN_treatment_Rep2	reverse
-97850	SAMN29981288	NEN_treatment_Rep3	reverse
-97853	SAMN29981291	DMSO_Rep1	reverse
-97854	SAMN29981292	DMSO_Rep2	reverse
-97855	SAMN29981293	DMSO_Rep3	reverse
+
+| UnisonId | sample alias | sampleId | strandedness | 
+|-----|------------|------------|-------|
+|97851	| SAMN29981289	| NEN_treatment_Rep1 |	reverse |
+|97852	| SAMN29981290	| NEN_treatment_Rep2 |	reverse |
+|97850	| SAMN29981288	| NEN_treatment_Rep3 |	reverse |
+|97853	| SAMN29981291	| DMSO_Rep1 |	reverse |
+|97854	| SAMN29981292	| DMSO_Rep2 |	reverse |
+|97855 |	SAMN29981293	| DMSO_Rep3 |	reverse |
 
 Once you've made the above edits, you need to either select or create a folder for the outputs of this analysis pipeline. You can do this by selecting an existing folder from the dropdown menu or by creating a new folder. For this demonstration, we select the 'GSE209801_rsem_start_GRCh38_test' option. After that we press the green Start pipelne button. 
 
