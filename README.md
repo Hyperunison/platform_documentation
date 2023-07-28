@@ -248,5 +248,8 @@ Progress of the pipeline run can be monitored on the page that opens. It will ta
 
 !!! Note: Add more information here on trouble shooting and explanations of the various tabs. !!!
 
-### Perform downstream processing to create the downstream differential gene expression analysis and visualization of results
+### Check Quality of your sequencing samples
 
+Once your running process is completed, go to the result files tab. In the result files tab you should see a "NfCorePipelineRnaseq" folder. Click on that folder and open the multiqc_report.html file. This document contains a number of relevant quality control measurements. Convince yourself that the sequencing quality was good. 
+
+### Perform downstream processing to create the downstream differential gene expression analysis and visualization of results
