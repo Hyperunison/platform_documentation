@@ -295,3 +295,28 @@ and
 
 As basis for the design file that we need to create, we will use the sample sheet. As filepath for that we note down:
 ```/home/jovyan/data/GSE209801_rsem_start_GRCh38_test/data/RnaSeqpublicpipeline/PRJNA862500/run458/NfCorePipelineRnaseq/samplesheet.csv```
+
+### Cloning github repository with donwstream analysis code
+A template with the code for the downstream analysis is retrieved from github. Before we clone this template repository, we need to create the necessary folder structures in our user area. 
+
+Now we need to create a project directory in the user area. To do so, we navigate to the project folder:
+```cd /home/jovyan/projects/```
+
+In the projects folder, you can create a new directory, for example 
+```mkdir project_demo```
+This command will create a folder named project_demo for this project. 
+
+Navigate into this folder by typing:
+```cd /home/jovyan/projects/project_demo/```
+
+In the project folder, we run the following command to create further directories:
+```mkdir workdir data code results```
+
+Now we navigate into the code folder and will clone the Unison rnaseq template repository. 
+
+```cd code```
+```git clone https://github.com/Hyperunison/rnaseqworkflow.git```
+
+This step will clone template scripts for the downstream rnaseq analysis into your analysis folder. 
+
+
