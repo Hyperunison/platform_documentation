@@ -319,4 +319,29 @@ Now we navigate into the code folder and will clone the Unison rnaseq template r
 
 This step will clone template scripts for the downstream rnaseq analysis into your analysis folder. 
 
+### Using the Unison rnaseq differential gene expression template jupyter notebook
+The cloned github repository will show up in the code folder as folder
+```/home/jovyan/projects/project_demo/code/rnaseqworkflow```
+
+Inside this folder you find a analyses folder. Navigate to this folder.
+
+```cd /home/jovyan/projects/project_demo/code/rnaseqworkflow/analyses```
+
+Inside this folder you'll find several templates for bulk-rnaseq analyses. For now we select the downstream_analysis_example_workflow
+```cd /home/jovyan/projects/project_demo/code/rnaseqworkflow/analyses/downstream_analysis_example_workflow```
+Inside this folder we find a jupyter notebook with the template code. 
+
+```ls /home/jovyan/projects/project_demo/code/rnaseqworkflow/analyses/downstream_analysis_example_workflow```
+
+In this case the template jupyter notebook is callsed 
+```example_RNAseq_downstream_workflow.ipynb```
+
+We now need to open this jupyter notebook in the jupyter server. To do that, go to the left-hand window of the data analysis tab on the unison page. Use the icons to navigate down this folder path:
+```/home/jovyan/projects/project_demo/code/rnaseqworkflow/analyses/downstream_analysis_example_workflow```
+Then click on the jupyter notebook 
+```example_RNAseq_downstream_workflow.ipynb```
+to open it. 
+
+### Using the jupyter notebook for the downstream analysis
+
 
