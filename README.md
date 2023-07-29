@@ -344,4 +344,32 @@ to open it.
 
 ### Using the jupyter notebook for the downstream analysis
 
+Once the jupyter notebook is open, we need to add our relevant folder paths to the "Setting Parameters for this Analysis" section of the notebook. 
+
+#### Create a design and model file for the differential gene expression analysis
+
+!!! Note: provide details here on how to create a design and a model file !!!
+
+#### Provide experiment parameters
+
+Scroll down to this section and fill in the details for this anaysis:
+
+For the first dataset we enter:
+```
+projectList[["First_RNAseq_Dataset"]] <- list(
+    "dataset_id" =  "GSE209801",
+    "primaryAlignmentGeneID" = "gene_id",
+    "geneIDcolumn" = "gene_id",
+    "datasetTitle" = "NEM Treatment dataset",
+    "datasetAbstractURL" = "",
+    "sampleSheetFile" = "path/to/samplesheet/File",
+    "designFile" = "../../../../results/nfcoreRnaseq_PRJEB23709_Run001/design/design.table.txt",
+    "modelFile" = "pathToModelFile",
+    "multiQChtmlFile" = "path/To/Individual/MultiQC",
+    "geneLevelFeatureCountFile" = "../../../../results/nfcoreRnaseq_PRJEB23709_Run001/star_rsem/rsem.merged.gene_counts.tsv",
+    "geneLevelTPMfile" = "../../../../results/nfcoreRnaseq_PRJEB23709_Run001/star_rsem/rsem.merged.gene_tpm.tsv"
+    )
+
+```
+As we do not have a second dataset in this analysis, we detelete the second dataset code block. 
 
