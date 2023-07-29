@@ -279,7 +279,7 @@ and review available files
 
 We see the following files:
 | File name |
---------------------------------
+|--------------------------------|
 | rsem.merged.gene_counts.tsv |
 | rsem.merged.gene_tpm.tsv |
 | samplesheet.csv |
