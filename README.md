@@ -253,3 +253,45 @@ Progress of the pipeline run can be monitored on the page that opens. It will ta
 Once your running process is completed, go to the result files tab. In the result files tab you should see a "NfCorePipelineRnaseq" folder. Click on that folder and open the multiqc_report.html file. This document contains a number of relevant quality control measurements. Convince yourself that the sequencing quality was good. 
 
 ### Perform downstream processing to create the downstream differential gene expression analysis and visualization of results
+
+#### Find file paths for input files for downstream analysis
+In order to perform the downstream analysis, we will have to find the file paths to files we need for the downstream processing. 
+
+The first file we need to locate is the RSEM feature count matrix. To do that, we open the terminal via the Data Analysis tab. Click the data analysis tab, then from the "Other menu" click on the terminal tile. 
+
+Now type 
+```cd ~```
+To make sure you are in your home directory. To find the output data, switch to the data folder by typing 
+``` cd data```
+Then type
+```ls``` 
+to see all folders in that directory. 
+
+You should see a folder that has the same name as you had choosen earlier in the analysis, in the case of this example "GSE209801_rsem_start_GRCh38_test". Within that folder you find a data filder. Within that folder you find a folder specifying the piplinename, in this case RnaSeqpublicpipeline. Within that folder you find the name of the dataset, in this case it's shown by it's biosample ID, rather than it's GEO ID, so here dataset GSE209801 is represented as PRJNA8652500. Next we select the run id and finally the folder with the output files, NfCorePipelineRnaSeq. 
+
+The full path to the result files for this analysis is in this case:
+```/home/jovyan/data/GSE209801_rsem_start_GRCh38_test/data/RnaSeqpublicpipeline/PRJNA862500/run458/NfCorePipelineRnaseq```
+
+We move into this folder
+```cd /home/jovyan/data/GSE209801_rsem_start_GRCh38_test/data/RnaSeqpublicpipeline/PRJNA862500/run458/NfCorePipelineRnaseq```
+and review available files
+```ls```
+
+We see the following files:
+| File name |
+--------------------------------
+| rsem.merged.gene_counts.tsv |
+| rsem.merged.gene_tpm.tsv |
+| samplesheet.csv |
+| multiqc_report.html |
+| rsem.merged.transcript_tpm.tsv |
+
+As input files we will need the files rsem.merged.gene_tpm.tsv and rsem.merged.gene_counts.tsv in this case.
+
+So we note as full filepaths:
+```/home/jovyan/data/GSE209801_rsem_start_GRCh38_test/data/RnaSeqpublicpipeline/PRJNA862500/run458/NfCorePipelineRnaseq/rsem.merged.gene_counts.tsv ```
+and
+```/home/jovyan/data/GSE209801_rsem_start_GRCh38_test/data/RnaSeqpublicpipeline/PRJNA862500/run458/NfCorePipelineRnaseq/sem.merged.gene_tpm.tsv```
+
+As basis for the design file that we need to create, we will use the sample sheet. As filepath for that we note down:
+```/home/jovyan/data/GSE209801_rsem_start_GRCh38_test/data/RnaSeqpublicpipeline/PRJNA862500/run458/NfCorePipelineRnaseq/samplesheet.csv```
