@@ -357,17 +357,17 @@ Scroll down to this section and fill in the details for this anaysis:
 For the first dataset we enter:
 ```
 projectList[["First_RNAseq_Dataset"]] <- list(
-    "dataset_id" =  "GSE209801",
+    "dataset_id" =  "PRJEB23709",
     "primaryAlignmentGeneID" = "gene_id",
     "geneIDcolumn" = "gene_id",
-    "datasetTitle" = "NEM Treatment dataset",
+    "datasetTitle" = "NEM dataset",
     "datasetAbstractURL" = "",
-    "sampleSheetFile" = "path/to/samplesheet/File",
-    "designFile" = "../../../../results/nfcoreRnaseq_PRJEB23709_Run001/design/design.table.txt",
-    "modelFile" = "pathToModelFile",
+    "sampleSheetFile" = "/home/jovyan/data/GSE209801_rsem_start_GRCh38_test/data/RnaSeqpublicpipeline/PRJNA862500/run458/NfCorePipelineRnaseq/samplesheet.csv",
+    "designFile" = "../../design/design.table.txt",
+    "modelFile" = "../../design/model.table.txt",
     "multiQChtmlFile" = "path/To/Individual/MultiQC",
-    "geneLevelFeatureCountFile" = "../../../../results/nfcoreRnaseq_PRJEB23709_Run001/star_rsem/rsem.merged.gene_counts.tsv",
-    "geneLevelTPMfile" = "../../../../results/nfcoreRnaseq_PRJEB23709_Run001/star_rsem/rsem.merged.gene_tpm.tsv"
+    "geneLevelFeatureCountFile" = "/home/jovyan/data/GSE209801_rsem_start_GRCh38_test/data/RnaSeqpublicpipeline/PRJNA862500/run458/NfCorePipelineRnaseq/rsem.merged.gene_counts.tsv",
+    "geneLevelTPMfile" = "/home/jovyan/data/GSE209801_rsem_start_GRCh38_test/data/RnaSeqpublicpipeline/PRJNA862500/run458/NfCorePipelineRnaseq/sem.merged.gene_tpm.tsv"
     )
 
 ```
