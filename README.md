@@ -235,12 +235,12 @@ Edited entries:
 
 | UnisonId | sample alias | sampleId | strandedness | 
 |-----|------------|------------|-------|
-|97851	| SAMN29981289	| NEN_treatment_Rep1 |	reverse |
-|97852	| SAMN29981290	| NEN_treatment_Rep2 |	reverse |
-|97850	| SAMN29981288	| NEN_treatment_Rep3 |	reverse |
-|97853	| SAMN29981291	| DMSO_Rep1 |	reverse |
-|97854	| SAMN29981292	| DMSO_Rep2 |	reverse |
-|97855 |	SAMN29981293	| DMSO_Rep3 |	reverse |
+|97851	| SAMN29981289	| NEN_treatment_1 |	reverse |
+|97852	| SAMN29981290	| NEN_treatment_2 |	reverse |
+|97850	| SAMN29981288	| NEN_treatment_3 |	reverse |
+|97853	| SAMN29981291	| DMSO_1 |	reverse |
+|97854	| SAMN29981292	| DMSO_2 |	reverse |
+|97855 |	SAMN29981293	| DMSO_3 |	reverse |
 
 Once you've made the above edits, you need to either select or create a folder for the outputs of this analysis pipeline. You can do this by selecting an existing folder from the dropdown menu or by creating a new folder. For this demonstration, we select the 'GSE209801_rsem_start_GRCh38_test' option. After that we press the green Start pipelne button. 
 
@@ -337,9 +337,9 @@ In this case the template jupyter notebook is callsed
 ```example_RNAseq_downstream_workflow.ipynb```
 
 We now need to open this jupyter notebook in the jupyter server. To do that, go to the left-hand window of the data analysis tab on the unison page. Use the icons to navigate down this folder path:
-```/home/jovyan/projects/project_demo/code/rnaseqworkflow/analyses/downstream_analysis_example_workflow```
+```/home/jovyan/projects/project_demo/code/rnaseqworkflow/analyses/downstream_analysis_1_DGE```
 Then click on the jupyter notebook 
-```example_RNAseq_downstream_workflow.ipynb```
+```Main_Analysis.ipynb```
 to open it. 
 
 ### Using the jupyter notebook for the downstream analysis
@@ -363,8 +363,8 @@ projectList[["First_RNAseq_Dataset"]] <- list(
     "datasetTitle" = "NEM dataset",
     "datasetAbstractURL" = "",
     "sampleSheetFile" = "/home/jovyan/data/GSE209801_rsem_start_GRCh38_test/data/RnaSeqpublicpipeline/PRJNA862500/run458/NfCorePipelineRnaseq/samplesheet.csv",
-    "designFile" = "../../design/design.table.txt",
-    "modelFile" = "../../design/model.table.txt",
+    "designFile" = NULL,
+    "modelFile" = NULL,
     "multiQChtmlFile" = "path/To/Individual/MultiQC",
     "geneLevelFeatureCountFile" = "/home/jovyan/data/GSE209801_rsem_start_GRCh38_test/data/RnaSeqpublicpipeline/PRJNA862500/run458/NfCorePipelineRnaseq/rsem.merged.gene_counts.tsv",
     "geneLevelTPMfile" = "/home/jovyan/data/GSE209801_rsem_start_GRCh38_test/data/RnaSeqpublicpipeline/PRJNA862500/run458/NfCorePipelineRnaseq/sem.merged.gene_tpm.tsv"
@@ -373,3 +373,10 @@ projectList[["First_RNAseq_Dataset"]] <- list(
 ```
 As we do not have a second dataset in this analysis, we detelete the second dataset code block. 
 
+Now we are ready to run the differential gene expression code template. 
+
+The jupyer notebook kernel (R422 in this case) should already be activated. In the template we don't have to worry about installing R-packages. These will be installed automatically by loading a R-renv environment. 
+
+To run the code in the jupyter notebook line-by-line you can use the forward arrow icon on top of the right hand panel in the jupyter notebook instance. Alternatively, you can run the entire jupyter notebook code by using the Run menu on the left hand side and select Run > Run all cells. 
+
+As Unison provides a code template, you can also edit the script, so it suits your needs. 
