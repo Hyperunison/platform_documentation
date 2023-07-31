@@ -60,7 +60,7 @@ You can use pipelines from the Unison workflow store !!! Note: section to be add
 ### Running the nf-core RNA-Seq pipeline
 
 ### RNA-Seq Differential gene expression workflow
-Log on to the Unison platform (https://genobase.pro/) using the following credentials:
+Log on to the Unison platform https://app.hyperunison.com/ using the following credentials:
 Username:        [your username]
 
 Pass:             [your password]
