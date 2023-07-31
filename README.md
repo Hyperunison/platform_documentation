@@ -10,6 +10,7 @@
 
 ## (5) Step-by-step-example: Run RNA-Seq analysis and Subsequent Differential Gene Expression Analysis
 
+## (6) Instructions specific for Alex's case
 
 ## Unison File Space and Workflows
 Logon to the Unison platform:
@@ -44,30 +45,17 @@ Within a project folder you find the following folders:
 /workdir folder: We would suggest to use the workdir folder to do actual work. Here you can create temporary or intermediate files that don’t need to be tracked via a version control system.
  
  
- 
- 
- Specific for Alex case
- 
-·  	The bulk-RNA-seq analysis can be conducted via GUI, as described previously. You can select a relevant RNA-Seq dataset from the datastore, select the bulkRNAseq workflow and run the alignment with the nf-core RNA-seq pipeline. Make sure to specify the correct species for the alignment.
-·  	Once the alignment analysis is complete, you can insert the file paths for the TPM and feature count matrices into the input section of the jupyter notebook for the downstream analysis.
-·  	As examples, we have three jupyter notebooks for you to work with (1) one notebook containing your original analysis code (2) A notebook to perform a very basic differential gene expression analysis on two integrated melanoma RNA-seq datasets and (3) a notebook to access TCGA data for further analysis, for example to integrate it with your own data or to perform downstream analyses on the TCGA data only.
-·  	The jupyter notebook with your (slightly refactored) code can be found at this path: /home/jovyan/projects/project05_Alex_melanoma_sing_scores/code/sing_score_workflow/analyses/sing_score_analysis/ sing_score_analysis_main.ipynb
-·  	The jupyter notebook with an example DGE analysis of the Gide et al and Hugo et al. dataset can be found at this path: home/jovyan/projects/project02_rnaseq_federation/code/bulkRNAseq/analyses/downstream_analysis_1_DGE/Main_Analysis.ipynb
-·  	The jupyter notebook with an example query for some melanoma TCGA RNAseq data can be found at this path: /home/jovyan/projects/project03_TCGA_data_import/code/TCGA_data_access/analyses/TCGA_gene_category_heatmaps/TCGA_heatmaps.ipynb
-·  	A fourth jupyter notebook has been created to develop a distinct analysis workflow for you. It can be reviewed under this path: /home/jovyan/projects/project01_custom_workflow_Alex/code/Alex_custom_analysis/analyses/alex_custom_analysis_no1/alex_custom_analysis_V1.ipynb
-It would be nice if you could add to this workbook ideas on what we can do together. It would be nice to create an end-to-end analysis workflow that’s meaningful to you.
-·  	All of the above three notebooks work with the R422 kernel.
-·  	To start a jupyter notebook, open the jupyter notebook within the Unison jupyter notebook server (to get there, click the data analyses tab within the Unison data analysis platform.
-·  	To navigate to the correct folder, use the folder icon on the left-hand side of the screen.
-·  	Once you have opened a jupyter notebook, the kernel should connect automatically. If it does not, select from the menu bar kernel > change kernel > select R422 from the pulldown menu.
-·  	To run a single cell of code in the jupyter notebook, use the forward arrow in the menu bar. Alternatively, you can select from the menu Run > Run All cells
-·  	If you have done some R-coding, the code should be familiar to you. You may edit any code cell and then re-run just that cell or or cells downstream of th
-
 ## (2) Data Store
+
+In the Unison data store you can find public GEO sequencing datasets. You can search by GEO ID number or by bioproject (PRJ) ID number. 
 
 ## (3) Data Analysis
 
+In the data analysis section you have access to a personal jupyter notebook server. Via the jupyter notebook server you also have access to a command line terminal. You can use a ready-made conda environment / kernel, or you can make your own. 
+
 ## (4) Pipelines and workflows
+
+You can use pipelines from the Unison workflow store !!! Note: section to be added !!! or you can upload your own workflows !!! Mechanism for workflow / pipeline upload needed !!!. In the simplest case, you can create a new jupyter notebook and implement your pipeline therein. 
 
 ### Running the nf-core RNA-Seq pipeline
 
@@ -380,3 +368,23 @@ The jupyer notebook kernel (R422 in this case) should already be activated. In t
 To run the code in the jupyter notebook line-by-line you can use the forward arrow icon on top of the right hand panel in the jupyter notebook instance. Alternatively, you can run the entire jupyter notebook code by using the Run menu on the left hand side and select Run > Run all cells. 
 
 As Unison provides a code template, you can also edit the script, so it suits your needs. 
+
+## (6) Instructions specific for Alex's case
+
+Specific for Alex case
+ 
+·  	The bulk-RNA-seq analysis can be conducted via GUI, as described previously. You can select a relevant RNA-Seq dataset from the datastore, select the bulkRNAseq workflow and run the alignment with the nf-core RNA-seq pipeline. Make sure to specify the correct species for the alignment.
+·  	Once the alignment analysis is complete, you can insert the file paths for the TPM and feature count matrices into the input section of the jupyter notebook for the downstream analysis.
+·  	As examples, we have three jupyter notebooks for you to work with (1) one notebook containing your original analysis code (2) A notebook to perform a very basic differential gene expression analysis on two integrated melanoma RNA-seq datasets and (3) a notebook to access TCGA data for further analysis, for example to integrate it with your own data or to perform downstream analyses on the TCGA data only.
+·  	The jupyter notebook with your (slightly refactored) code can be found at this path: /home/jovyan/projects/project05_Alex_melanoma_sing_scores/code/sing_score_workflow/analyses/sing_score_analysis/ sing_score_analysis_main.ipynb
+·  	The jupyter notebook with an example DGE analysis of the Gide et al and Hugo et al. dataset can be found at this path: home/jovyan/projects/project02_rnaseq_federation/code/bulkRNAseq/analyses/downstream_analysis_1_DGE/Main_Analysis.ipynb
+·  	The jupyter notebook with an example query for some melanoma TCGA RNAseq data can be found at this path: /home/jovyan/projects/project03_TCGA_data_import/code/TCGA_data_access/analyses/TCGA_gene_category_heatmaps/TCGA_heatmaps.ipynb
+·  	A fourth jupyter notebook has been created to develop a distinct analysis workflow for you. It can be reviewed under this path: /home/jovyan/projects/project01_custom_workflow_Alex/code/Alex_custom_analysis/analyses/alex_custom_analysis_no1/alex_custom_analysis_V1.ipynb
+It would be nice if you could add to this workbook ideas on what we can do together. It would be nice to create an end-to-end analysis workflow that’s meaningful to you.
+·  	All of the above three notebooks work with the R422 kernel.
+·  	To start a jupyter notebook, open the jupyter notebook within the Unison jupyter notebook server (to get there, click the data analyses tab within the Unison data analysis platform.
+·  	To navigate to the correct folder, use the folder icon on the left-hand side of the screen.
+·  	Once you have opened a jupyter notebook, the kernel should connect automatically. If it does not, select from the menu bar kernel > change kernel > select R422 from the pulldown menu.
+·  	To run a single cell of code in the jupyter notebook, use the forward arrow in the menu bar. Alternatively, you can select from the menu Run > Run All cells
+·  	If you have done some R-coding, the code should be familiar to you. You may edit any code cell and then re-run just that cell or or cells downstream of the cells you have edited. 
+
