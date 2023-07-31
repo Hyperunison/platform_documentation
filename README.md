@@ -369,6 +369,8 @@ To run the code in the jupyter notebook line-by-line you can use the forward arr
 
 As Unison provides a code template, you can also edit the script, so it suits your needs. 
 
+As an example for customization, have a look into the ```Main_Analysis-Barbie-theme.ipynb``` jupyter notebook in the same folder. Instead of a standard plot theme, it uses the Barbie movie theme for plots using MathewBJanes Theme_Park package. 
+
 ## (6) Instructions specific for Alex's case
 
 Specific for Alex case
