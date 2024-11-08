@@ -67,6 +67,7 @@ You need to start the runner and keep it running continuously, as it listens for
 2. Copy the Kubernetes config to the `Resources/.kube` folder. The folder should contain a single file named `config`.
 3. More information about the Kubernetes config file can be found [here](https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/).
 
+<<<<<<< HEAD
 ### How to Identify When Scanning Is Started and Finished
 **Scanning has started**  
 you can see list of source tables in a Structure mapping interface. 
@@ -76,6 +77,10 @@ Log message with log.level < 10
 ```json
 2024-11-04 11:15:31,947 [DEBUG] [main] response body: b'{\n    "type": "idle",\n    "readCount": 0,\n    "data": {\n        "idle": true\n    },\n    "status": "none"\n}'
 ```
+=======
+### How to Identify When Scanning Is Finished via Logs
+Observe the logs in your terminal. When the scanning process completes, you will see a completion message in the logs.
+>>>>>>> origin/main
 
 ## Check Results on the Platform
 1. Open the converter section.
