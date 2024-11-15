@@ -18,29 +18,40 @@ If any questions via [LinkedIn](https://www.linkedin.com/company/hyperunison/), 
 
 ## Table of contents
 
-### Overviews 
-- Platform principle schema
-- Architecture principle schema
+### Introduction
+- Request account - Ivan
 
-### Guides
-- Register accounts
-- [How to connect database](./how-to-connect-db/how-to-connect-db.md)
-- Connect example datasource (data without mappings)
-- Connect training datasource (data and the mappings)
-- Harmonisation process
-  - Structure mapping (from source structure to CDM structure transformation)
-  - Value mapping (from source value to vocabulary value mapping)
-- Federation process
-  - Query language
-  - Cohort distribution building
+### Harmonisation proccess
+- Add datasource
+  - Example and training - Ivan
+  - [Connect your database](./how-to-connect-db/how-to-connect-db.md)
+- Make structure mapping - Ivan
+  - [SQL expression examples](https://github.com/Hyperunison/platform_documentation/wiki/Unison-SQL-expressions)
+  - CTE creation and usage - Artem
+  - Invert dependencies - Artem
+- Make value mapping - Ivan
+  - Part 1
+  - Part 2
+- Test mappings
 
+Specialties
+- Create custom CDM - Artem
+- Create custom vocabulary - Artem
+- Data export- Ivan
+  - Export log analysis - Artem
 
-### Tutorials
-   * [SQL expression examples](https://github.com/Hyperunison/platform_documentation/wiki/Unison-SQL-expressions)
-   * UQL examples
-   * Invert dependencies
-   * CTE creation and usage
-   * Export log analysis
+### Federation and data extraction
+- Create cohort (Cohort distribution building)
+  - Query language = UQL - Artem
+- Pipeline execution
 
 ### API
-- API & SDK 
+- API & SDK
+- Create API Key and use Unison API
+
+### Users and access
+- Create users (??)
+
+
+
+
