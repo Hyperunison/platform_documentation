@@ -27,7 +27,7 @@ If any questions via [LinkedIn](https://www.linkedin.com/company/hyperunison/), 
   - [Connect your database](./how-to-connect-db/how-to-connect-db.md)
 - Make structure mapping - Ivan
   - [SQL expression examples](https://github.com/Hyperunison/platform_documentation/wiki/Unison-SQL-expressions)
-  - CTE creation and usage - Artem
+  - [CTE creation and usage](cte-creation-and-usage/index.md)
   - Invert dependencies - Artem
 - Make value mapping - Ivan
   - Part 1
@@ -42,7 +42,7 @@ Specialties
 
 ### Federation and data extraction
 - Create cohort (Cohort distribution building)
-  - Query language = UQL - Artem
+- [Query language = UQL - Artem](UQL/index.md)
 - Pipeline execution
 
 ### API
