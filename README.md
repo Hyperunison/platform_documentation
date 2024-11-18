@@ -29,9 +29,9 @@ If any questions via [LinkedIn](https://www.linkedin.com/company/hyperunison/), 
 
 Specialties
 - [Create custom CDM](./custom-cdm/custom-cdm.md)
-- Create custom vocabulary - Artem
+- [custom-vocabulary/index.md](custom-vocabulary/index.md)
 - Data export- Ivan
-  - Export log analysis - Artem
+- Export log analysis - Artem
 
 ### Federation and data extraction
 - Create cohort (Cohort distribution building)
