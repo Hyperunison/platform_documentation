@@ -36,12 +36,8 @@ Specialties
 - [Pipeline execution](./api-playground/pipeline-execution.md)
 
 ### API & SDK
-- SDK
+- [SDK](https://github.com/Hyperunison/unison-sdk-python/tree/master)
 - [Create API Key](./api-descriptions/create-api-key.md)
-- API
-
-### Users and access
-- Create users 
 
 
 
