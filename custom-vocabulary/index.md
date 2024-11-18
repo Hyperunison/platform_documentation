@@ -1,22 +1,26 @@
 # Custom Vocabulary
-Hyperunison contains standard OMOP 5.4 vocabularies downloaded from [OHDSI Athena](https://athena.ohdsi.org/vocabulary/list) website
-All those vocabularies are available by default and may be explored in the Hyperunison Platform
 
-During custom CDM creation, field may require to be only values from some specific vocabularies
+HyperUnison includes standard OMOP 5.4 vocabularies downloaded from the [OHDSI Athena](https://athena.ohdsi.org/vocabulary/list) website.  
+All these vocabularies are available by default and can be explored within the HyperUnison Platform.
 
-## Explore available vocabularies
-- Click on profile icon in the top right corner
-- Choose [Profile] menu item
-- On the left menu choose [Vocabularies]
-You will see all available vocabularies: public and your own
+When creating a custom CDM, fields may require values only from specific vocabularies.
 
-## Create custom vocabulary
-- Go to vocabularies page
-- Download any existing vocabulary as example. Good choice will be "Visit Type" vocabulary, as it is small
-- Modify downloaded CSV file to your needs. Fields description:
-- - `concept_name` - name of concept, may be any string
-- - `concept_code` - unique identifier of the concept in the vocabulary
-- - `domain_id` - domain of concept, for example `Observation`, `Measurement`, .... Fields in a custom CDM may require only values with specific domain_id
-- - `concept_class_id` - domain of concept, may be any string. For example `Precoordinated pair`, `Variable`, `Value`, .... Fields in a custom CDM may require only values with concept_class_id
-- - `standard_concept` - string "S" (standard) or "N" (non-stanrard). By default auto suggestions are generated with only standard concepts.  Fields in a custom CDM may require only values with standard concepts
-- Press [IMPORT] button and upload the vocabulary
+## Explore Available Vocabularies
+
+- Click on the **profile icon** in the top-right corner.
+- Choose the **[Profile]** menu item.
+- In the left menu, select **[Vocabularies]**.  
+
+You will see a list of all available vocabularies, including public vocabularies and your custom ones.
+
+## Create a Custom Vocabulary
+
+1. Go to the **Vocabularies** page.
+2. Download any existing vocabulary as an example. A good choice is the "Visit Type" vocabulary since it is small.
+3. Modify the downloaded CSV file according to your needs. The fields are as follows:
+   - **`concept_name`**: The name of the concept, which can be any string.
+   - **`concept_code`**: A unique identifier for the concept in the vocabulary.
+   - **`domain_id`**: The domain of the concept, such as `Observation`, `Measurement`, etc. Fields in a custom CDM may require values with a specific `domain_id`.
+   - **`concept_class_id`**: The class of the concept, which can be any string (e.g., `Precoordinated Pair`, `Variable`, `Value`, etc.). Fields in a custom CDM may require values with a specific `concept_class_id`.
+   - **`standard_concept`**: Indicates whether the concept is standard ("S") or non-standard ("N"). By default, auto-suggestions include only standard concepts. Fields in a custom CDM may require values marked as standard concepts.
+4. Press the **[IMPORT]** button and upload your modified vocabulary.

@@ -1,3 +1,4 @@
+
 # How to write Unison-SQL scripts
 
 ## Examples for SQL joins
@@ -129,7 +130,7 @@ In data extraction rule we should choose created join in “table joined” fiel
 
 ---
 
-### How to generate what?
+### How to reorder relations between tables
 
 ❗This example based on tutorial Allergy dataset. You can add to your account and look at all the code directly at the Unison Platform. 
 
@@ -181,4 +182,3 @@ In this case we create an array with all 20 diagnoses, and then take N’s eleme
 
 * Each source rows will be multiplied by 20 times, as we joined in with a table with 20 rows without any condition  
 * We created an expression with the array of 20 elements and took N’s element from the array in N’s row. So the first row will contain diag1, second \- diag2, …
-

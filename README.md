@@ -1,44 +1,54 @@
-# Welcome to Unison platform documentation
+# Welcome to Unison Platform Documentation
 
-## Unison platform 
-Unison platform provide functionality for data harmonisation and federation with 
-common data models (CDM) like OMOP or Sentinel. For more specific goals Unison provide 
-custom CDM builder and builder for vocabularies.  
+## Unison Platform
 
-## Core features
-- data convertion from source structures and values to CDM and` standard vocabularies
-- export to several SQL databases like PostgreSQL, mySQL, etc. 
-- federated queries and data distribution across multiple datasets
-- nextflow pipelines execution
-- API for integration Unison platform with customer's analysis infrastructure  
-- collaborative features for mapping person like data stewards, ETL engineers and others
+The Unison platform provides functionality for data harmonization and federation with common data models (CDM) such as OMOP or Sentinel. For specific goals, Unison also offers a custom CDM builder and vocabulary builder.
 
-## Contact us
-If any questions via [LinkedIn](https://www.linkedin.com/company/hyperunison/), [Website](https://hyperunison.com/), [Slack community](https://join.slack.com/t/unisoncommunity/shared_invite/zt-2p75t4fhc-Kiksdz2sf19zjYi_JVHzNg)
+---
 
-## Table of contents
+## Core Features
 
-### Harmonisation proccess
-- [Connect your database](./how-to-connect-db/how-to-connect-db.md)
-- [Make structure mapping](./structure-mapping/structure-mapping.md)
-  - [SQL expression examples](./sql-expressions-examples/sql-expressions.md)
-  - [CTE creation and usage](cte-creation-and-usage/index.md)
-- [Make value mapping](./value-mapping/value-mapping.md)
-- [Test mappings](./test-mappings/test-mapping.md)
+- Data conversion from source structures and values to CDM and standard vocabularies.  
+- Export to multiple SQL databases like PostgreSQL, MySQL, etc.  
+- Federated queries and data distribution across multiple datasets.  
+- **Nextflow** pipeline execution.  
+- API for integrating the Unison platform with the customer's analysis infrastructure.  
+- Collaborative features for mapping personnel such as data stewards, ETL engineers, and others.
 
-Specialties
-- [Create custom CDM](./custom-cdm/custom-cdm.md)
-- [Custom-vocabulary/index.md](custom-vocabulary/index.md)
+---
 
-### Federation and data extraction
-- [Build cohort distribution](./api-playground/cohort-qerying.md)
-  - [Query language = UQL](UQL/index.md)
-- [Pipeline execution](./api-playground/pipeline-execution.md)
+## Contact Us
+
+If you have any questions, feel free to reach out via:  
+- [LinkedIn](https://www.linkedin.com/company/hyperunison/)  
+- [Website](https://hyperunison.com/)  
+- [Slack Community](https://join.slack.com/t/unisoncommunity/shared_invite/zt-2p75t4fhc-Kiksdz2sf19zjYi_JVHzNg)
+
+---
+
+## Table of Contents
+
+### Harmonization Process
+
+- [Connect Your Database](./how-to-connect-db/how-to-connect-db.md)  
+- [Make Structure Mapping](./structure-mapping/structure-mapping.md)  
+  - [SQL Expression Examples](./sql-expressions-examples/sql-expressions.md)  
+  - [CTE Creation and Usage](cte-creation-and-usage/index.md)  
+- [Make Value Mapping](./value-mapping/value-mapping.md)  
+- [Test Mappings](./test-mappings/test-mapping.md)  
+
+### Federation and Data Extraction
+
+- [Build Cohort Distribution](./api-playground/cohort-qerying.md)  
+  - [Query Language - UQL](UQL/index.md)  
+- [Pipeline Execution](./api-playground/pipeline-execution.md)  
+
+### Specialties
+
+- [Create Custom CDM](./custom-cdm/custom-cdm.md)  
+- [Custom Vocabulary](./custom-vocabulary/index.md)
 
 ### API & SDK
-- [SDK](https://github.com/Hyperunison/unison-sdk-python/tree/master)
-- [Create API Key](./api-descriptions/create-api-key.md)
 
-
-
-
+- [SDK](https://github.com/Hyperunison/unison-sdk-python/tree/master)  
+- [Create API Key](./api-descriptions/create-api-key.md)  

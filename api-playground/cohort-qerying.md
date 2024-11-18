@@ -1,7 +1,6 @@
-# How to query data with Unison Platform
+# How to Query Data with the Unison Platform
 
-- Open federation tab at the main menu
-- Use [UQL](../UQL/index.md) and write query to get data (first time you can use example query)
-- Click on "view distribution" button
-- Look at the charts
-
+- Open the **Federation** tab in the main menu.
+- Use [UQL](../UQL/index.md) to write a query to retrieve data (for the first time, you can use an example query).
+- Click the **View Distribution** button.
+- Review the charts to analyze the data.

@@ -1,27 +1,41 @@
-# How to test mappings
+# How to Test Mappings
+
 There are several ways to test mappings:
-- Intermediate export - export of concrete table from CDM. 
-- Query with API playground
-- Full data export - export of all mapped data.
 
-## Intermediate export
-Available only if: 
-- User runner has permissions for intermediate export
-- Data was mapped to the CDM table and all SQL expressions are correct
+- **Intermediate Export**: Export a specific table from the CDM to validate mapping accuracy.  
+- **Query with API Playground**: Use API and UQL queries to explore results and distributions.  
+- **Full Data Export**: Export all mapped data for verification.
 
-Each mapped CDM table may be exported to check mapping correctness. Export works only to CSV format. All you need is:
-- Open structure mapping
-- Select interested CDM entity
-- Click on "intermediate export" button and 
-- Wait for export 
-- Download CSV file and explore it 
+---
 
-## Query with API playground
-- Use API playground and UQL
-- Build query and explore results data and distributions
+## Intermediate Export
 
-## Full data export
-- Open structure mapping of the dataset of interest
-- Go to the export page
-- Select type of export (db or csv)
-- Follow the instructions
+**Prerequisites**:  
+- The runner has permissions for intermediate export.  
+- Data has been mapped to a CDM table, and all SQL expressions are correct.
+
+Each mapped CDM table can be exported to verify the correctness of the mapping. Exports are available only in CSV format.
+
+**Steps**:  
+1. Open the **Structure Mapping** section.  
+2. Select the relevant CDM entity.  
+3. Click the **Intermediate Export** button.  
+4. Wait for the export process to complete.  
+5. Download the CSV file and review its content to verify the mapping.
+
+---
+
+## Query with API Playground
+
+1. Use the **API Playground** to execute queries.  
+2. Build a query using **UQL** (Unison Query Language).  
+3. Analyze the returned data and its distributions to ensure correctness.
+
+---
+
+## Full Data Export
+
+1. Open the **Structure Mapping** section for the dataset of interest.  
+2. Navigate to the **Export Page**.  
+3. Select the export type: database (`db`) or CSV.  
+4. Follow the provided instructions to complete the export process.  
