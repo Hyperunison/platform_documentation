@@ -18,24 +18,17 @@ If any questions via [LinkedIn](https://www.linkedin.com/company/hyperunison/), 
 
 ## Table of contents
 
-### Introduction
-- Request account - Ivan
-
 ### Harmonisation proccess
 - Add datasource
-  - Example and training - Ivan
   - [Connect your database](./how-to-connect-db/how-to-connect-db.md)
-- Make structure mapping - Ivan
-  - [SQL expression examples](https://github.com/Hyperunison/platform_documentation/wiki/Unison-SQL-expressions)
+- [Make structure mapping](./structure-mapping/structure-mapping.md)
+  - [SQL expression examples](./sql-expressions-examples/sql-expressions.md)
   - [CTE creation and usage](cte-creation-and-usage/index.md)
-  - Invert dependencies - Artem
-- Make value mapping - Ivan
-  - Part 1
-  - Part 2
+- [Make value mapping](./value-mapping/value-mapping.md)
 - Test mappings
 
 Specialties
-- Create custom CDM - Artem
+- [Create custom CDM](./custom-cdm/custom-cdm.md)
 - Create custom vocabulary - Artem
 - Data export- Ivan
   - Export log analysis - Artem
@@ -50,7 +43,7 @@ Specialties
 - Create API Key and use Unison API
 
 ### Users and access
-- Create users (??)
+- Create users 
 
 
 

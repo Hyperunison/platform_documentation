@@ -77,7 +77,7 @@ The equivalence definitions are based on the [the HL7 concept map equivalence](h
 
 ## Quick mapping interface
 
-![][image1]
+![quick-mapping](./media/quick-mapping.jpg)
 
 1. CDM data structure. Choose the CDM entity for vocabulary mapping. Here is all the entities that are mapped in a structure mapping as vocabulary.   
 2. Process menu:   
@@ -91,8 +91,8 @@ The equivalence definitions are based on the [the HL7 concept map equivalence](h
 
 ## Detailed mapping interface
 
-![][image2]  
-![][image3]
+![detailed-mapping](./media/detailed-interface.jpg)  
+![detailed-mapping-2](./media/detailed-interface-2.jpg)
 
 1. Section with the CDM structure \- select the CDM entity for showing source values that should be mapped. Percentage show to user how many values are completed. Values will be showed one by one.   
 2. Section with chosen target concepts. Here user can see what concepts are chosen.   
