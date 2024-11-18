@@ -31,9 +31,9 @@ Specialties
 - [Custom-vocabulary/index.md](custom-vocabulary/index.md)
 
 ### Federation and data extraction
-- Create cohort (Cohort distribution building)
-- [Query language = UQL - Artem](UQL/index.md)
-- Pipeline execution
+- [Build cohort distribution](./api-playground/cohort-qerying.md)
+  - [Query language = UQL](UQL/index.md)
+- [Pipeline execution](./api-playground/pipeline-execution.md)
 
 ### API & SDK
 - SDK
