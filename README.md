@@ -19,28 +19,26 @@ If any questions via [LinkedIn](https://www.linkedin.com/company/hyperunison/), 
 ## Table of contents
 
 ### Harmonisation proccess
-- Add datasource
-  - [Connect your database](./how-to-connect-db/how-to-connect-db.md)
+- [Connect your database](./how-to-connect-db/how-to-connect-db.md)
 - [Make structure mapping](./structure-mapping/structure-mapping.md)
   - [SQL expression examples](./sql-expressions-examples/sql-expressions.md)
   - [CTE creation and usage](cte-creation-and-usage/index.md)
 - [Make value mapping](./value-mapping/value-mapping.md)
-- Test mappings
+- [Test mappings](./test-mappings/test-mapping.md)
 
 Specialties
 - [Create custom CDM](./custom-cdm/custom-cdm.md)
-- [custom-vocabulary/index.md](custom-vocabulary/index.md)
-- Data export- Ivan
-- Export log analysis - Artem
+- [Custom-vocabulary/index.md](custom-vocabulary/index.md)
 
 ### Federation and data extraction
 - Create cohort (Cohort distribution building)
 - [Query language = UQL - Artem](UQL/index.md)
 - Pipeline execution
 
-### API
-- API & SDK
-- Create API Key and use Unison API
+### API & SDK
+- SDK
+- [Create API Key](./api-descriptions/create-api-key.md)
+- API
 
 ### Users and access
 - Create users 
