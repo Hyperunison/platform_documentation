@@ -28,6 +28,10 @@ If you have any questions, feel free to reach out via:
 
 ## Table of Contents
 
+### Introduction
+- [Platform overview](./platform-overview/overview.md)
+- [How to use example dataset](./example-dataset/example-dataset.md)
+
 ### Harmonization Process
 
 - [Connect Your Database](./how-to-connect-db/how-to-connect-db.md)  
