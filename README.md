@@ -30,7 +30,7 @@ If you have any questions, feel free to reach out via:
 
 ### Introduction
 - [Platform overview](./platform-overview/overview.md)
-- [How to use example dataset](./example-dataset/example-dataset.md)
+- [How to add example dataset](./example-dataset/example-dataset.md)
 
 ### Harmonization Process
 
