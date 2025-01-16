@@ -31,6 +31,7 @@ If you have any questions, feel free to reach out via:
 ### Introduction
 - [Platform overview](./platform-overview/overview.md)
 - [How to add example dataset](./example-dataset/example-dataset.md)
+- [Quick start guide](/quick-start/quick-start.md)
 - [Workspaces and Data Sources](/datasource-workspace/datasource-workspace.md)
 
 ### Harmonization Process
