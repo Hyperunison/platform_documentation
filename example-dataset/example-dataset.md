@@ -16,4 +16,6 @@ You can use it in two versions:
 5. Click "Add".
 6. Please be patient, this may take a moment.
 
-![how-to-add-example-dataset](./media/add-example.gif)
+![gif](./media/createworkspace-1stpart-ezgif.com-video-to-gif-converter.gif)  
+
+![gif](./media/createworkspace-2ndpart-ezgif.com-video-to-gif-converter.gif)
