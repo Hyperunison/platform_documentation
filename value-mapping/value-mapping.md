@@ -1,14 +1,32 @@
-# How Unison Vocabulary Mapping Works
+# How Unison Semantic Mapping Works
 
-## What is Vocabulary Mapping?
+## Table of Contents
 
-Value mapping is the process of mapping source data to concept IDs from standard and non-standard vocabularies. These relationships are used for data standardization and enable data federation across multiple datasets.
+1. [What is Semantic Mapping?](#what-is-semantic-mapping)
+2. [Unison Semantic Mapping Process Overview](#unison-semantic-mapping-process-overview)
+3. [Equivalence and Mapping Type](#equivalence-and-mapping-type)
+   - [Equivalence](#equivalence)
+   - [Mapping Types](#mapping-types)
+4. [Quick Mapping Interface](#quick-mapping-interface)
+5. [Detailed Mapping Interface](#detailed-mapping-interface)
+6. [Unison Mapping Suggestions](#unison-mapping-suggestions)
+7. [Export Mappings](#export-mappings)
+8. [Quick Mapping Workflow](#quick-mapping-workflow)
+9. [Detailed Research Workflow](#detailed-research-workflow)
+10. [Review Workflow](#review-workflow)
+11. [Bulk Concept ID Assignment](#bulk-concept-id-assignment)
 
 ---
 
-## Unison Vocabulary Mapping Process Overview
+## What is Semantic Mapping?
 
-Unison provides a value mapping process with three steps:
+Semantic mapping is the process of mapping source data to concept IDs from standard and non-standard vocabularies. These relationships are used for data standardization and enable data federation across multiple datasets.
+
+---
+
+## Unison Semantic Mapping Process Overview
+
+Unison provides a semantic mapping process with three steps:
 
 1. **Quick Mapping**: Table view with options for multiple choices and actions, ideal for values with equal concept names or high-confidence values.  
 2. **Detailed Research**: A specialized view with more information.  
@@ -29,6 +47,27 @@ In all interfaces, Unison provides quick access to:
 
 ---
 
+## Bulk Concept ID Assignment
+
+Unison now supports bulk concept ID assignment using hotkeys for improved efficiency.
+
+### **New Hotkeys**
+- **Ctrl/Cmd + C** – Copy selected concept IDs.
+- **Ctrl/Cmd + V** – Paste copied concept IDs into selected rows.
+- **Alt/Option + 1** – Mark selected rows as **To Do**.
+- **Alt/Option + 2** – Mark selected rows as **Research**.
+- **Alt/Option + 3** – Mark selected rows as **Review**.
+- **Alt/Option + 4** – Mark selected rows as **Complete**.
+
+### **How It Works**
+To copy a concept ID, select a row by clicking the checkbox and press **Ctrl/Cmd + C**. Then, select the target rows where you want to paste and press **Ctrl/Cmd + V**.
+
+Similarly, to change the status of multiple rows, select them using checkboxes and use the corresponding **Alt/Option + [1-4]** hotkey to update their status.
+
+These hotkeys streamline the mapping process, reducing manual input and improving workflow efficiency.
+
+---
+
 ## Equivalence and Mapping Type
 
 ### **Equivalence**
@@ -43,87 +82,14 @@ Equivalence definitions are based on the [HL7 concept map equivalence](https://w
 
 ### **Mapping Types**
 
-#### **MAPS_TO**
-
-- **Description**: Indicates a direct relationship between one concept and another.  
-- **Example**: Diagnosis: Diabetes Mellitus → Concept: "Diabetes Mellitus" in OMOP.
-
-#### **MAPS_TO_VALUE**
-
-- **Description**: Links specific values to concepts, such as lab test results.  
-- **Example**: Blood Glucose Level = 5.5 mmol/L → Concept: "Blood Glucose Level" in OMOP.
-
-#### **MAPS_TO_UNIT**
-
-- **Description**: Associates units of measurement with concepts.  
-- **Example**: Blood Pressure Unit = mmHg → Concept: "Blood Pressure Measurement" in OMOP.
-
-#### **MAPS_TO_OPERATOR**
-
-- **Description**: Links mathematical/logical operators with concepts.  
-- **Example**: Blood Glucose Level > 7 mmol/L → Concept: "Blood Glucose Level" in OMOP.
-
-#### **MAPS_TO_TYPE**
-
-- **Description**: Associates data types (e.g., integer, date) with concepts.  
-- **Example**: Data Type: Integer → Concept: "Age" in OMOP.
-
-#### **MAPS_TO_NUMBER**
-
-- **Description**: Maps numerical values directly to concepts.  
-- **Example**: Blood Pressure = 120/80 mmHg → Concept: "Blood Pressure Measurement" in OMOP.
-
----
-
-## Quick Mapping Interface
-
-![quick-mapping](./media/quick-mapping.jpg)
-
-1. **CDM Data Structure**: Choose the CDM entity for vocabulary mapping.  
-2. **Process Menu**:  
-   - **Research Button**: Lists values in the research stage.  
-   - **Review Button**: Lists values in the review stage.  
-   - **Download Button**: Exports mapping results as a spreadsheet.  
-3. **Action Menu** for chosen values.  
-4. **Table Management** (row names, filters).  
-5. **Checkbox** for multiple selections.  
-6. **Concept Search Field** (shows suggestions by default).
-
----
-
-## Detailed Mapping Interface
-
-![detailed-mapping](./media/detailed-interface.jpg)  
-![detailed-mapping-2](./media/detailed-interface-2.jpg)
-
-1. **CDM Structure Section**: Select a CDM entity to display source values for mapping. Shows completion percentage.  
-2. **Target Concepts Section**: Displays selected concepts.  
-3. **Source Value Information Section**:  
-   - Source value.  
-   - Mapped CDM entity field.  
-   - Value frequency.  
-   - Link to the extraction rule.  
-   - Athena search button.  
-   - Mapping controls (status buttons, comments).  
-4. **Search Section**: Includes search fields and results, with an option to view mapped values.  
-5. **Mapped Values View**: Displays mapped values for reference.  
-6. **Menu Toggle Button**: Show/hide the left menu.  
-7. **Entity Name Toggle**: Show original/short names of entities.  
-8. **Exit to Overview Table**: Returns to the quick mapping view.
-
----
-
-## Unison Mapping Suggestions
-
-Unison provides algorithmic and AI-based suggestions for vocabulary mapping. It identifies equal values and corner cases using an AI model and calculates a confidence score (0–100%).
-
-Users can specify vocabularies and domains for generating suggestions in the structure mapping view.
-
----
-
-## Export Mappings
-
-Mappings can be exported as an Excel table for external review or other purposes.
+| Mapping Type        | Description | Example |
+|---------------------|-------------|---------|
+| **MAPS_TO**        | Indicates a direct relationship between one concept and another. | Diagnosis: Diabetes Mellitus → Concept: "Diabetes Mellitus" in OMOP. |
+| **MAPS_TO_VALUE**  | Links specific values to concepts, such as lab test results. | Blood Glucose Level = 5.5 mmol/L → Concept: "Blood Glucose Level" in OMOP. |
+| **MAPS_TO_UNIT**   | Associates units of measurement with concepts. | Blood Pressure Unit = mmHg → Concept: "Blood Pressure Measurement" in OMOP. |
+| **MAPS_TO_OPERATOR** | Links mathematical/logical operators with concepts. | Blood Glucose Level > 7 mmol/L → Concept: "Blood Glucose Level" in OMOP. |
+| **MAPS_TO_TYPE**   | Associates data types (e.g., integer, date) with concepts. | Data Type: Integer → Concept: "Age" in OMOP. |
+| **MAPS_TO_NUMBER** | Maps numerical values directly to concepts. | Blood Pressure = 120/80 mmHg → Concept: "Blood Pressure Measurement" in OMOP. |
 
 ---
 
@@ -163,4 +129,5 @@ Mappings can be exported as an Excel table for external review or other purposes
    - Write a comment and click **Research** to return to the detailed research stage.  
    - Use the search field to refine concepts or filters.  
    - Update target concepts and mapping details.  
-6. Click **Complete** to approve mappings.  
+6. Click **Complete** to approve mappings.
+
